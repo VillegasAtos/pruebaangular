@@ -1,0 +1,29 @@
+<div class="form-alumnos">
+  <mat-form-field appearance="fill" class="input">
+    <mat-label>Nombre</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="model.nombre"
+      #nombre="ngModel"
+      class="example-right-align"
+      placeholder="Nombre"
+      (change)="onChange()"
+    />
+  </mat-form-field>
+  <p></p>
+
+  <mat-form-field appearance="fill" class="input">
+    <mat-label>Apellido</mat-label>
+    <input matInput type="text" class="example-right-align" placeholder="Apellido" />
+  </mat-form-field>
+  <p></p>
+
+  <mat-form-field appearance="fill" class="input">
+    <mat-label>Edad</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="Edad" />
+  </mat-form-field>
+
+  <p></p>
+  <button class="btn btn-primary btn">Primary</button>
+</div>
