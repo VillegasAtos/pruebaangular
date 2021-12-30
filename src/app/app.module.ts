@@ -11,11 +11,40 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableComponent } from './components/table/table.component';
 import { AgregaralumnoComponent } from './components/agregaralumno/agregaralumno.component';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AlumnosService } from './services/alumnos.service';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { EliminarComponent } from './components/table/eliminar/eliminar.component';
+import { ModificarComponent } from './components/table/modificar/modificar.component';
+import { AgregarComponent } from './components/table/agregar/agregar.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, TableComponent, AgregaralumnoComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MaterialModule, NgbModule, FormsModule],
-  providers: [],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    TableComponent,
+    AgregaralumnoComponent,
+    ModificarComponent,
+    EliminarComponent,
+    AgregarComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    NgbModule,
+    FormsModule,
+    MatDialogModule,
+  ],
+  providers: [
+    AlumnosService,
+    {
+      provide: MatDialogRef,
+      useValue: {},
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
