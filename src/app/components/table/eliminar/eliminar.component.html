@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Confirmación</h2>
+<div mat-dialog-content>
+  <p class="text-warning">Deseas eliminar?</p>
+</div>
+<div mat-dialog-actions>
+  <button class="btn btn-secondary" (click)="onNoClick()">No</button>
+  <button class="btn btn-danger mx-3" [mat-dialog-close]="{ message: 'eliminar' }" cdkFocusInitial>Si</button>
+</div>
